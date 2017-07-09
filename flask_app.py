@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, render_template
+from flask import Flask, request, redirect, render_template, url_for
 from flask_restful import Resource, Api
 import xml.etree.ElementTree as ET # Parse XML files returned by WeChat
 import json
@@ -25,7 +25,12 @@ def register():
 @app.route('/subscriptions')
 def getSubscriptions():
     subscriptions = conn.getUserSubscriptions(request.args['openID'])
-    return str(subscriptions)
+    #subscriptions = ['smic-school']
+    return render_template('index.html', subscriptions=subscriptions, addSubscriptionUrl=url_for('addSubscription'))
+
+@app.route('/add-subscription')
+def addSubscription():
+    return render_template('addSubcriptions.html', subscriptions=['smic-school'])
 
 """GET request from WeChat to authenticate the server.
 See: http://admin.wechat.com/wiki/index.php?title=Getting_Started
