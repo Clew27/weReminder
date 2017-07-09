@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ subscriptionName }}</title>
+	</head>
+	<body>
+		<div class="container">
+	    <header>
+	      <h1>Todo List</h1>
+	    </header>
+
+	    <ul>
+	    	{% for event in events %}
+        	<li class="">
+			    <button class="delete">&times;</button>			 
+			    <span class="text">{{ "{}\n{}".format(event['title'], event['info']) }}</span>
+			</li>
+			{% endfor %}
+	    </ul>
+	  </div>
+	</body>
+</html>

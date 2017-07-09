@@ -1,0 +1,8 @@
+{
+	"WeChat": {
+		"appID": "wx3db84585986145ea",
+		"appSecret": "6068c651245eca206c821c950397cb1b",
+		"token": "KYGzYFIk17vPH-g35pmJhrBpAdPpGnlkXDKBr-6DIXQ",
+		"custom-menu": "{\"button\": [{\"type\": \"click\", \"name\": \"Today's Schedule\", \"key\": \"schedule_key\"}, {\"type\": \"click\", \"name\": \"Subscriptions\", \"key\": \"register_key\"}]}"
+	}
+}
